@@ -1,6 +1,8 @@
 import { watcherSaga, workerSaga } from './sagas'
 
-it('redu saga test', () => {
+//TODO - Need to add Saga tests
+
+it('redux saga test', () => {
   const test = workerSaga()
   const test2 = test.next()
   console.log('test2: ', test2)
