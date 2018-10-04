@@ -99,6 +99,7 @@ I realised afterwards that I need to sign up for an account.  Which gave me acce
 
 # Future Improvements
 
+* Have a hosted version running
 * Get the Redux Saga tests working
 * Improve test coverage.
 * Display more Weather data
