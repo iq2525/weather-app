@@ -10,7 +10,7 @@ export function* watcherSaga() {
 function fetchDog() {
   return axios({
     method: "get",
-    url: "https://dog.ceo/api/breeds/image/random"
+    url: "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=af205e61bec78a460503dbf39412d2ad"
   });
 }
 
@@ -18,10 +18,12 @@ function fetchDog() {
 function* workerSaga() {
   try {
     const response = yield call(fetchDog);
-    const dog = response.data.message;
+    console.log('response.data: ', response.data)
+    
+    const weather = response.data.name;
 
     // dispatch a success action to the store with the new dog
-    yield put({ type: "API_CALL_SUCCESS", dog });
+    yield put({ type: "API_CALL_SUCCESS", weather });
   
   } catch (error) {
     // dispatch a failure action to the store with the error
