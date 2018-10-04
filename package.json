@@ -2,13 +2,19 @@
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
+  "setupFiles": [
+    "<rootDir>/src/setupTests.js"
+  ],
   "dependencies": {
     "ajv": "^6.5.4",
     "axios": "^0.18.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.4",
+    "react-test-renderer": "^16.5.2",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0"
   },
@@ -26,5 +32,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "redux-saga-test-plan": "^3.7.0"
+  }
 }

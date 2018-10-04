@@ -1,28 +1,29 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
+import WeatherDetails from "./components/WeatherDetails.js";
 
 import { connect } from "react-redux";
 
 class App extends Component {
   render() {
-    const { fetching, weather, onRequestDog, error } = this.props;
+    const { fetching, weather, onUpdateWeather, error } = this.props;
     console.log('weather: ', weather)
 
     return (
       <div className="App">
         <header className="App-header">
           
-          {/* <img src={dog || logo} className="App-logo" alt="logo" /> */}
-          
           <h1 className="App-title">
             Welcome to Dog Saga
-            {weather && 
-              <div>{weather}</div>
-            }
-            <div></div>
           </h1>
         </header>
+
+        <WeatherDetails 
+          fetching={fetching}
+          weather={weather}
+          error={error}
+        />
 
         {weather ? (
           <p className="App-intro">Keep clicking for new dogs</p>
@@ -33,7 +34,7 @@ class App extends Component {
         {fetching ? (
           <button disabled>Fetching...</button>
         ) : (
-          <button onClick={onRequestDog}>Request a Dog</button>
+          <button onClick={onUpdateWeather}>Update Weather</button>
         )}
 
         {error && <p style={{ color: "red" }}>Uh oh - something went wrong!</p>}
@@ -53,7 +54,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onRequestDog: () => dispatch({ type: "API_CALL_REQUEST" })
+    onUpdateWeather: () => dispatch({ type: "API_CALL_REQUEST" })
   };
 };
 

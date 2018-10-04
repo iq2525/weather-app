@@ -42,7 +42,10 @@ Issues / Difficulties
 
 CORS
 
+
+
 More TIME
 
 make the App ID configurable
-
+Redux Action Creators
+UI - Select different cities
