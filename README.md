@@ -27,7 +27,7 @@ npm start
 
 In your browser, go to: http://localhost:3000/
 
-Click the button 'Update Button' to get the latest weather data for London.
+Click the button 'Update Weather' to get the latest weather data for London.
 
 ## Run tests
 I believe that Unit tests are vital when making any code.

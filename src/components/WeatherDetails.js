@@ -7,7 +7,7 @@ export default class WeatherDetails extends Component {
       return (<div className="instructions">Click the button to get weather data for London</div>)
     }
     
-    const { name: cityName, main, weather: weatherConditions } = weather
+    const { name: cityName, weather: weatherConditions } = weather
     const weatherConditionsList = weatherConditions.map((weatherCondition) => {
       return (<div 
                 className="weather-condition"
