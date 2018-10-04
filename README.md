@@ -42,7 +42,7 @@ Issues / Difficulties
 
 CORS
 
-
+Improve test coverage.
 
 More TIME
 

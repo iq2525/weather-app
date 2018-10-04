@@ -1,21 +1,20 @@
 import React, { Component } from "react";
-// import logo from "./logo.svg";
 import "./App.css";
 import WeatherDetails from "./components/WeatherDetails.js";
+import WeatherControlPanel from "./components/WeatherControlPanel.js";
 
 import { connect } from "react-redux";
 
 class App extends Component {
   render() {
     const { fetching, weather, onUpdateWeather, error } = this.props;
-    console.log('weather: ', weather)
-
+    
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="header">
           
-          <h1 className="App-title">
-            Welcome to Dog Saga
+          <h1 className="title">
+            Welcome to the Weather App
           </h1>
         </header>
 
@@ -25,20 +24,11 @@ class App extends Component {
           error={error}
         />
 
-        {weather ? (
-          <p className="App-intro">Keep clicking for new dogs</p>
-        ) : (
-          <p className="App-intro">Replace the React icon with a dog!</p>
-        )}
-
-        {fetching ? (
-          <button disabled>Fetching...</button>
-        ) : (
-          <button onClick={onUpdateWeather}>Update Weather</button>
-        )}
-
-        {error && <p style={{ color: "red" }}>Uh oh - something went wrong!</p>}
-
+        <WeatherControlPanel
+          fetching={fetching}
+          onUpdateWeather={onUpdateWeather}
+          error={error}
+        />
       </div>
     );
   }
