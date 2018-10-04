@@ -4,14 +4,10 @@ export default class WeatherDetails extends Component {
   
   renderWeatherDetails = (weather) => {
     if (!weather){
-      return null
+      return (<div>Click the button to get weather data for London</div>)
     }
     
-    console.log('1')
     const { name: cityName, main, weather: weatherConditions } = weather
-    console.log('2')
-    console.log('cityName: ', cityName)
-
     const weatherConditionsList = weatherConditions.map((weatherCondition) => {
       return (<div 
                 className="weather-condition"

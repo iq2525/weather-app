@@ -5,7 +5,7 @@ export default class WeatherControlPanel extends Component {
     const { fetching, onUpdateWeather, error } = this.props;
     
     return (
-      <div>
+      <div className="weather-control-panel">
         {fetching ? (
           <button className="update-button" disabled={true}>Fetching...</button>
         ) : (
