@@ -4,7 +4,7 @@ export default class WeatherDetails extends Component {
   
   renderWeatherDetails = (weather) => {
     if (!weather){
-      return (<div>Click the button to get weather data for London</div>)
+      return (<div className="instructions">Click the button to get weather data for London</div>)
     }
     
     const { name: cityName, main, weather: weatherConditions } = weather
