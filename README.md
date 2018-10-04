@@ -41,3 +41,8 @@ Put LIVE with Heroku
 Issues / Difficulties
 
 CORS
+
+More TIME
+
+make the App ID configurable
+
