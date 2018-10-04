@@ -58,7 +58,7 @@ A possible fix would be to look at something like:
 
 ## Unit testing with Jest & Enzyme
 
-All tests are done with Jest and Enzyme.
+All tests are located next to the source file so they are easy to import.
 
 ## High Order Components & Presentational Components
 
