@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import WeatherDetails from "./components/WeatherDetails.js";
 import WeatherControlPanel from "./components/WeatherControlPanel.js";
 

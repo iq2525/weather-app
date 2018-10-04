@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './WeatherDetails.scss'
 export default class WeatherDetails extends Component {
   
   renderWeatherDetails = (weather) => {
@@ -26,8 +26,7 @@ export default class WeatherDetails extends Component {
 
   
   render() {
-    const { fetching, weather, error } = this.props;
-    console.log('weather: ', weather)
+    const { weather } = this.props;
 
     return (
       <div className="weather-details">

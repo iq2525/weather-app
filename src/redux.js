@@ -11,8 +11,6 @@ const initialState = {
 };
 
 export function reducer(state = initialState, action) {
-  console.log('test: ', state, action)
-  
   switch (action.type) {
     case API_CALL_REQUEST:
       return { ...state, fetching: true, error: null };

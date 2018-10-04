@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './WeatherControlPanel.scss'
 export default class WeatherControlPanel extends Component {
   render() {
     const { fetching, onUpdateWeather, error } = this.props;

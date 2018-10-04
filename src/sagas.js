@@ -7,8 +7,7 @@ export function* watcherSaga() {
 }
 
 // function that makes the api request and returns a Promise for response
-function fetchDog() {
-  console.log('calling')
+function fetchWeatherData() {
   return axios({
     method: "get",
     url: "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=af205e61bec78a460503dbf39412d2ad"
@@ -18,9 +17,7 @@ function fetchDog() {
 // worker saga: makes the api call when watcher saga sees the action
 export function* workerSaga() {
   try {
-    const response = yield call(fetchDog);
-    console.log('response.data: ', response.data)
-    
+    const response = yield call(fetchWeatherData);
     const weather = response.data;
 
     // dispatch a success action to the store with the new dog
